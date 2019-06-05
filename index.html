@@ -1,0 +1,33 @@
+<html>
+    <head>
+            
+        <title>Autocomplete</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    </head>
+    <body>
+        <!-- User input -->
+        <input id="resultInput" style="width: 100%;"  oninput="filterResult()" type="text" name="result">
+    
+
+        <!-- Where we show the results -->
+        <div id="result">
+    
+        </div>
+        <!-- Where we show all the possible words set -->
+        <div style="margin-top: 2em">All words:</div>
+        <div id="all">
+    
+        </div>
+    </body>
+    <script type="text/javascript">
+        //Initializing variable with all the possible words
+        this.results = ['Fernando', 'Mariana', 'Fernandes', 'Mariene', 'Barbara', 'Carlos', 'Tamires', 'Maria', 'Bruno', 'Felipe', 'Lucas', ];    
+        //Variable that is going to store all filtered words
+        this.possibleResults = [];
+
+        document.getElementById('all').innerHTML = this.results;
+    </script>
+    <!-- Import js file with autocomplete logic -->
+    <script src="complete.js"></script>    
+</html>
